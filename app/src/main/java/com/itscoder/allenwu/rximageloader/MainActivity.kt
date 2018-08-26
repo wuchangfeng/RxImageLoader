@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         initView()
     }
 
-    fun initView(){
+    private fun initView(){
         var mImageView = findViewById<ImageView>(R.id.iv_photo)
         findViewById<Button>(R.id.btn_load).setOnClickListener(View.OnClickListener {
             RxImgLoader.with(this)!!.load(mUrl)!!.into(mImageView)
